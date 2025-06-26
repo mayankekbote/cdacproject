@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <header>
+        <h1>Edit a Note</h1>
+        <p>Search for a note by ID or title, then update its content.</p>
+    </header>
+
+    <div class="search-section">
+        <label for="noteId">Search by ID:</label>
+        <input type="number" id="noteId" placeholder="Enter note ID" />
+        <button onclick="loadNoteById()">Load by ID</button>
+
+        <br><br>
+
+        <label for="noteTitle">Search by Title:</label>
+        <input type="text" id="noteTitle" placeholder="Enter note title" />
+        <button onclick="loadNoteByTitle()">Load by Title</button>
+    </div>
+
+    <form id="editForm" style="display:none;">
+        <textarea id="editContent" required></textarea>
+        <button type="submit">Update Note</button>
+    </form>
+    <p id="status"></p>
+</div>
+<script src="{{ url_for('static', filename='js/edit_note.js') }}"></script>
+{% endblock %}

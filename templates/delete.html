@@ -1,0 +1,16 @@
+<!-- templates/delete_note.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <header>
+        <h1>Delete Notes</h1>
+        <p>Select a note to delete it permanently.</p>
+    </header>
+
+    <div id="notesContainer" class="card-container">
+        <!-- Notes will be injected by JS -->
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/delete_note.js') }}"></script>
+{% endblock %}

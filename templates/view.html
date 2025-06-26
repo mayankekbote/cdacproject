@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <header>
+        <h1>View Your Notes</h1>
+        <p>Browse all your saved notes and read their contents.</p>
+    </header>
+
+    <div id="notesContainer" class="card-container">
+        <!-- Notes will be injected by JavaScript -->
+    </div>
+
+    <!-- Modal for viewing note content -->
+    <div id="noteModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/view_notes.css') }}">
+<script src="{{ url_for('static', filename='js/view_notes.js') }}"></script>
+{% endblock %}

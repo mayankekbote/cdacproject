@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <header>
+        <h1>Create New Note</h1>
+        <p>Write down your thoughts here.</p>
+    </header>
+
+    <form id="noteForm">
+        <div style="margin-bottom: 1rem;">
+            <input type="text" id="noteTitle" placeholder="Note Title" required
+                   style="width: 100%; padding: 0.75rem; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <textarea id="noteContent" rows="10" placeholder="Write your note..." required
+                      style="width: 100%; padding: 0.75rem; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+        </div>
+        <button type="submit"
+                style="padding: 0.75rem 1.5rem; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">
+            Save Note
+        </button>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='js/create.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Welcome to Your Notepad</h1>
+        <p>A simple, clean, and secure way to store your thoughts, ideas, and notes online.</p>
+    </header>
+
+    <div class="card-container">
+        <a href="/create" class="card">
+            <h2>Create a File</h2>
+            <p>Start fresh with a new note.</p>
+        </a>
+        <a href="/delete" class="card">
+            <h2>Delete a File</h2>
+            <p>Erase unwanted notes permanently.</p>
+        </a>
+        <a href="/edit" class="card">
+            <h2>Edit a Note</h2>
+            <p>Update the content of an existing note.</p>
+        </a>
+        <!-- ✅ New View Note Card -->
+        <a href="/view" class="card">
+            <h2>View a Note</h2>
+            <p>Read and browse your saved notes.</p>
+        </a>
+    </div>
+</div>
+<footer>Created By Mayank Ekbote</footer>
+
+</body>
+</html>
